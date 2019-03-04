@@ -1,6 +1,6 @@
 Part 1
 
-Questions
+Questions:
 1. The bug moves to a new location, only if the space in front of it is open, if not it turns 45 degrees.
 2. The direction it's facing.
 3. Turns 45 degrees clockwise.
@@ -12,7 +12,7 @@ Questions
 9. Rocks don't move, but they block the bug's path.
 10. Bugs can be on flowers on the same space.
 
-Exercises
+Exercises:
 1.
 0 - North
 45 - Northeast
@@ -27,4 +27,14 @@ Exercises
 3. setColor()
 4. The bug disapeared 
 
+
 Part 2
+
+Questions:
+1. Gives how many spaces the bug should move on each side.
+2. It keeps track of how many spaces the bug has moved.
+3. The bug needs to turn 90 degrees but turn() only moves the bug 45 degrees.
+4. The move method is in Bug and BoxBug extends Bug.
+5. Yes, length doesn't change after it is constructed. However, if the path isn't clear, the pattern will differ.
+6. It can if there is an obstacle in the way of the path.
+7. Right before a bug starts moving in a new direction.
