@@ -21,14 +21,13 @@
 import info.gridworld.actor.Bug;
 
 /**
- * A <code>ZBug</code> traces out a square "box" of a given size. <br />
+ * A <code>DancingBug</code> traces out a square "box" of a given size. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
-public class ZBug extends Bug {
+public class DancingBug extends Bug {
 	
-	private int steps;
-	private int sideLength;
-	private int sidesComplete;
+	private int[] dance;
+	private int index;
 
 	/**
 	 * Constructs a box bug that traces a square of a given side length
@@ -36,51 +35,23 @@ public class ZBug extends Bug {
 	 * @param length
 	 *            the side length
 	 */
-	public ZBug(int length) {
-		steps = 0;
-		sidesComplete = 0;
-		sideLength = length;
+	public DancingBug(int[] dance) {
+		this.dance = dance;
+		index = 0;
 	}
 
 	/**
 	 * Moves to the next location of the square.
 	 */
 	public void act() {
-		if (sidesComplete < 1) {
-
-			setDirection(90);
-
-			if (steps < sideLength && canMove()) {
-				move();
-				steps++;
-			} else {
-				turn();
-				turn();
-				turn();
-				steps = 0;
-				sidesComplete++;
-			}
-		} else if (sidesComplete == 1) {
-			if (steps < sideLength && canMove()) {
-				move();
-				steps++;
-			} else {
-				turn();
-				turn();
-				turn();
-				turn();
-				turn();
-				steps = 0;
-				sidesComplete++;
-			}
-		} else if (sidesComplete == 2) {
-			if (steps < sideLength && canMove()) {
-				move();
-				steps++;
-			} else {
-				steps = 0;
-				sidesComplete++;
-			}
+		if (index >= dance.length) {
+			index = 0;
+		}
+		if (canMove()) {
+			move();
+		} else {
+			setDirection(getDirection() + (dance[index] * 45));
+			index++;
 		}
 	}
 }

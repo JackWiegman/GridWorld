@@ -38,3 +38,5 @@ Questions:
 5. Yes, length doesn't change after it is constructed. However, if the path isn't clear, the pattern will differ.
 6. It can if there is an obstacle in the way of the path.
 7. Right before a bug starts moving in a new direction.
+
+5. Create new BoxBug object, and add it to the grid using world.add()
