@@ -40,3 +40,29 @@ Questions:
 7. Right before a bug starts moving in a new direction.
 
 5. Create new BoxBug object, and add it to the grid using world.add()
+
+
+Part 3
+
+Questions:
+1. loc1.getRow()
+2. false
+3. (4, 4)
+4. 135
+5. Takes in a direction.
+
+1. getOccupiedLocations(); (getRows() * getColumns) - getOccupiedLocations();
+2. isValid(new Location(10,10));
+3. Able to override with methods in child classes.
+4. It's easier to store objects in ArrayLists
+
+1. Location, Direction, Color
+2. 0, red for bugs, black for rocks, color of the bug for flowers.
+3. So it can have it's own properties and methods.
+4. No. No. Yes but only adding and deleting in code not in the grid.
+5. actor.setDirection(getDirection() + 90);
+
+1. isValid(getAdjacentLocation(getDirection()));
+2. getOccupiedAdjacentLocations();
+3. isValid(), getOccupiedAdjacentLocation(); check if it's okay to move
+4. 

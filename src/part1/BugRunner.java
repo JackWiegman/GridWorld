@@ -33,8 +33,11 @@ public class BugRunner {
 	
 	public static void main(String[] args) {
 		ActorWorld world = new ActorWorld();
-		world.add(new Bug());
+		Bug bob = new Bug();
+		world.add(bob);
 		world.add(new Rock());
+		world.remove(bob);
+		world.add(bob);
 		world.show();
 	}
 }
