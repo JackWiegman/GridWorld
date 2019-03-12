@@ -65,4 +65,13 @@ Questions:
 1. isValid(getAdjacentLocation(getDirection()));
 2. getOccupiedAdjacentLocations();
 3. isValid(), getOccupiedAdjacentLocation(); check if it's okay to move
-4. 
+4. isValid(), getOccupiedLocations();
+5. move()
+6. canMove is false so it doesn't move
+7. It is better to just get a variable.
+8. They are set to the color of the bug when they are created
+9. No.
+10. add(new Flower())
+11. 4
+
+
